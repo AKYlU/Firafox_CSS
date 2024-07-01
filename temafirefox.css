@@ -1,0 +1,11 @@
+body {
+    background-image: https://img.freepik.com/fotos-gratis/uma-pintura-de-um-lago-de-montanha-com-uma-montanha-ao-fundo_188544-9126.jpg?w=740&t=st=1719865788~exp=1719866388~hmac=468a93b6b62dbb56efbf80991255f849497c2622a3da31a65aca71ed122cba7f;
+}
+
+*[div] {
+    background-color: transparent;
+}
+
+*[id] {
+    background-color: transparent;
+}
