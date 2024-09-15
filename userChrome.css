@@ -1,145 +1,285 @@
-/* Base color for the theme, dependent on whether it's a light theme or not */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --accent-color: transparent;
-    }
+*,
+*::before,
+*::after {
+	font-family: JetBrainsMono Nerd Font, JetBrains Mono, monospace, monospace;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --accent-color: transparent;
-    }
-}
-/*====== Aesthetics ======*/
-
-#navigator-toolbox {
-    border-bottom: none !important;
+#alltabs-button,
+.titlebar-buttonbox-container,
+#page-action-buttons,
+#tracking-protection-icon-container,
+#identity-box {
+	display: none;
 }
 
 #titlebar {
-    background: var(--accent-color) !important;
+	z-index: 2;
 }
 
-/* Sets the toolbar color */
-toolbar#nav-bar {
-    background: var(--accent-color) !important;
-    box-shadow: none !important;
+@media (-moz-bool-pref: "animatedFox.squareCorners") {
+	:root * {
+		border-radius: 0px !important;
+	}
 }
 
-/* Sets the URL bar color */
-#urlbar {
-    background: var(--accent-color) !important;
+@media (-moz-bool-pref: "animatedFox.hideSingleTab") {
+	.tabbrowser-tab:only-of-type {
+		height: 0px !important;
+
+		#titlebar:has(&):after {
+			content: '';
+			position: fixed !important;
+			right: 0;
+			left: 0;
+			top: 0;
+			height: 1rem;
+		}
+
+		:has(&) #navigator-toolbox:is(:hover, :focus-within, :has([open])) #nav-bar {
+			top: 1rem !important;
+		}
+	}
+
+	:has(.tabbrowser-tab:only-of-type) #nav-bar {
+		top: -3rem !important;
+	}
 }
 
-#urlbar-background {
-    background: var(--accent-color) !important;
-    border: none !important;
-}
-
-#urlbar-input-container {
-    border: none !important;
-}
-
-/*====== UI Settings ======*/
-
-:root {
-    --navbarWidth: 500px; /* Set width of navbar */
-}
-
-/* If the window is wider than 1000px, use flex layout */
-@media (min-width: 1000px) {
-    #navigator-toolbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    /*  Url bar  */
-    #nav-bar {
-        order: 1;
-        width: var(--navbarWidth);
-    }
-
-    /* Tab bar */
-    #titlebar {
-        order: 2;
-        width: calc(100vw - var(--navbarWidth) - 1px);
-    }
-
-    /* Bookmarks bar */
-    #PersonalToolbar {
-        order: 3;
-        width: 100%;
-    }
-    
-    /* Fix urlbar sometimes being misaligned */
-    :root[uidensity="compact"] #urlbar {
-        --urlbar-toolbar-height: 39.60px !important;
-    }
-
-    :root[uidensity="touch"] #urlbar {
-        --urlbar-toolbar-height: 49.00px !important;
-    }
-}
-
-/*====== Simplifying interface ======*/
-
-/* Autohide back button when disabled */
-#back-button, #forward-button {
-    transform: scale(1, 1) !important;
-    transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
-}
-
-#back-button[disabled="true"], #forward-button[disabled="true"] {
-    margin-left: -34px !important;
-    opacity: 0 !important;
-    transform: scale(0.8, 0.8) !important;
-    pointer-events: none !important;
-}
-
-/* Remove UI elements */
-#identity-box, /* Site information */
-#tracking-protection-icon-container, /* Shield icon */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
-#urlbar-go-button, /* Search URL magnifying glass */
-#alltabs-button, /* Menu to display all tabs at the end of tabs bar */
-.titlebar-buttonbox-container /* Minimize, maximize, and close buttons */ {
-    display: none !important;
+@media (-moz-bool-pref: "animatedFox.showTabCloseButton") {
+	#tabbrowser-tabs .tabbrowser-tab:not([pinned], [selected]):hover .tab-close-button {
+		display: flex !important;
+	}
 }
 
 #nav-bar {
-    box-shadow: none !important;
+	position: fixed !important;
+	top: 0;
+	left: 35%;
+	right: 35%;
+
+	@media (max-width: 400px) {
+		left: 0%;
+		right: 0%;
+	}
+
+	@media (max-width: 400px) {
+		left: 0px;
+		right: 0px;
+	}
+
+	z-index: 1;
+	transition: top 0.3s cubic-bezier(0.270, 0.910, 0.435, 1.280),
+	opacity 0.1s ease !important;
+	border-top: none !important;
+	border-radius: 10px;
+	border: 1px solid var(--tab-selected-bgcolor) !important;
+	background: var(--lwt-accent-color) !important;
+	opacity: 0;
+	overflow: visible !important;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1rem;
+		top: -1rem;
+	}
 }
 
-/* Remove "padding" left and right from tabs */
-.titlebar-spacer {
-    display: none !important;
+#navigator-toolbox {
+	border-bottom: none !important;
 }
 
-/* Fix URL bar overlapping elements */
-#urlbar-container {
-    min-width: initial !important;
+#tabs-newtab-button {
+	opacity: 0;
+	transition: 0.2s opacity ease;
 }
 
-/* Remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-> #tabbrowser-arrowscrollbox
-> .tabbrowser-tab[first-visible-unpinned-tab] {
-    margin-inline-start: 0 !important;
+#navigator-toolbox:not(:hover, :focus-within, :has([open])) #nav-bar {
+	transition-delay: 0.2s !important;
 }
 
-/* Hide the hamburger menu */
-#PanelUI-menu-button { 
-    padding: 0px !important;
+#navigator-toolbox:is(:hover, :focus-within, :has([open])) {
+	#nav-bar {
+		top: 3.5rem;
+		opacity: 1;
+	}
+
+	#tabs-newtab-button {
+		opacity: 1;
+	}
 }
 
-#PanelUI-menu-button .toolbarbutton-icon { 
-    width: 1px !important; 
+:where(.tab-background) {
+	box-shadow: none !important;
+	border-radius: 10px !important;
 }
 
-#PanelUI-menu-button .toolbarbutton-badge-stack {
-    padding: 0px !important; 
+.tab-close-button {
+	display: none;
+}
+
+.tabbrowser-tab {
+	transition: min-width 0.3s cubic-bezier(0.270, 0.910, 0.435, 1.280), max-width 0.3s cubic-bezier(0.270, 0.910, 0.435, 1.280), height 0.1s ease !important;
+	height: 100%;
+
+	&[fadein]:not([pinned]) {
+		max-width: 175px !important;
+	}
+
+	&[selected]:not([pinned]) {
+		min-width: 250px !important;
+		max-width: 250px !important;
+	}
+}
+
+:where(#urlbar-background) {
+	border-radius: 10px !important;
+}
+
+.urlbarView-url {
+	color: var(--toolbar-color) !important;
+}
+
+#tabbrowser-arrowscrollbox {
+	min-width: 100vw !important;
 }
 
 
+@media (-moz-bool-pref: "animatedFox.centeredTabs") {
+	#tabbrowser-arrowscrollbox:not([overflowing]) {
+		--uc-flex-justify: center;
+	}
 
+	scrollbox[orient="horizontal"] {
+		justify-content: var(--uc-flex-justify, initial);
+	}
+}
+
+@media (-moz-bool-pref: "animatedFox.centeredUrl") {
+	#nav-bar {
+		text-align: center;
+	}
+}
+
+@media (-moz-bool-pref: "animatedFox.roundedCorners") {
+
+	:root[sizemode="fullscreen"] #navigator-toolbox[style*="margin-top"]+#browser,
+	:root[sizemode="fullscreen"] #browser {
+		--uc-rc-padding: 0;
+		--uc-rc-radius: 0;
+	}
+
+	#main-window[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel,
+	#main-window[BookmarksToolbarOverlapsBrowser] #sidebar-box {
+		padding-top: 0 !important;
+	}
+
+	#main-window[BookmarksToolbarOverlapsBrowser] #browser {
+		margin-top: var(--bookmarks-toolbar-overlapping-browser-height);
+	}
+
+	#navigator-toolbox {
+		border-bottom: none !important;
+	}
+
+	#main-window:not([chromehidden~="toolbar"]) {
+		--uc-rc-padding: 6px;
+		--uc-rc-radius: 10px;
+
+		--uc-browser-frame-bgcolor: var(--lwt-accent-color);
+
+		#appcontent .browserStack {
+			margin-inline: var(--uc-rc-padding) !important;
+			margin-bottom: var(--uc-rc-padding) !important;
+			border-radius: var(--uc-rc-radius) !important;
+			background-color: var(--lwt-accent-color) !important;
+			position: relative !important;
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				border-radius: inherit;
+				box-shadow: 0 0 0 16px var(--lwt-accent-color) !important;
+				border: 1px solid var(--tab-selected-bgcolor) !important;
+				clip-path: inset(0);
+				pointer-events: none;
+			}
+		}
+
+		#statuspanel {
+			overflow: hidden;
+		}
+
+		.devtools-toolbox-side-iframe {
+			margin-block-end: var(--uc-rc-padding) !important;
+			border-radius: var(--uc-rc-radius) !important;
+			overflow: hidden !important;
+			box-shadow: var(--lwt-accent-color) !important;
+
+			&:first-child {
+				margin-inline-start: var(--uc-rc-padding) !important;
+			}
+
+			&:last-child {
+				margin-inline-end: var(--uc-rc-padding) !important;
+			}
+		}
+
+		.devtools-toolbox-bottom-iframe {
+			margin-inline: var(--uc-rc-padding) !important;
+			margin-block-start: 0 !important;
+			border-radius: var(--uc-rc-radius) !important;
+			overflow: hidden !important;
+			box-shadow: var(--lwt-accent-color) !important;
+		}
+
+		.devtools-side-splitter,
+		.devtools-horizontal-splitter {
+			background-color: var(--lwt-accent-color) !important;
+		}
+
+		.browserContainer.responsive-mode {
+			background-color: var(--lwt-accent-color) !important;
+
+			& .rdm-toolbar {
+				margin-inline: var(--uc-rc-padding) !important;
+				border-top-left-radius: var(--uc-rc-radius) !important;
+				border-top-right-radius: var(--uc-rc-radius) !important;
+				width: calc(100% - var(--uc-rc-padding) * 2) !important;
+			}
+		}
+
+		:not(:root[inFullscreen] #navigator-toolbox[style*="margin-top"])+#browser #sidebar-splitter {
+			border-inline-width: 0 !important;
+		}
+
+		#browser {
+			background-color: var(--lwt-accent-color);
+		}
+
+		#tabbrowser-tabpanels {
+			background-color: var(--lwt-accent-color) !important;
+		}
+	}
+
+	#sidebar-box {
+		margin-inline: var(--uc-rc-padding) !important;
+		margin-bottom: var(--uc-rc-padding) !important;
+		border-radius: var(--uc-rc-radius) !important;
+		background-color: var(--lwt-accent-color) !important;
+		position: relative !important;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: inherit;
+			box-shadow: 0 0 0 16px var(--lwt-accent-color) !important;
+			border: 1px solid var(--tab-selected-bgcolor) !important;
+			clip-path: inset(0);
+			pointer-events: none;
+		}
+	}
+}
