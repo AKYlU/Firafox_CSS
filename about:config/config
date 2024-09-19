@@ -1,4 +1,4 @@
-# para ativar a GPU
+# para ativar uso GPU
 gfx.webrender.all
 
 # impedir que guias fixadas sejam carregadas
