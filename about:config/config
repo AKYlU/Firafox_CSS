@@ -1,1 +1,6 @@
+# para ativar a GPU
+gfx.webrender.all
+
+# impedir que guias fixadas sejam carregadas
+browser.sessionstore.restore_on_demand
 
