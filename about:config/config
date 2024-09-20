@@ -1,3 +1,9 @@
+# ativar o arquivo css (acho)
+toolkit.legacyUserProfileCustomizations.stylesheets
+
+# deixa compact UI ou Barra
+browser.compactmode.show
+
 # para ativar uso GPU
 gfx.webrender.all
 
