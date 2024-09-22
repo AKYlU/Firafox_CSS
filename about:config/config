@@ -4,9 +4,3 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 # deixa compact UI ou Barra
 browser.compactmode.show
 
-# para ativar uso GPU
-gfx.webrender.all
-
-# impedir que guias fixadas sejam carregadas
-browser.sessionstore.restore_on_demand
-
