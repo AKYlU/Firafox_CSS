@@ -1,84 +1,64 @@
-/* titulo da bar */
-.titlebar-buttonbox {
-    display: none !important;
-}
-
-.titlebar-spacer {
-    display: none !important;
-}
-
+/* Oculta os botões Voltar, Avançar, minimizar, maximizar e fechar etc */
+.tab-close-button,
+.titlebar-spacer,
+.titlebar-buttonbox,
 .tabs-new-tab-button,
-#tabbrowser-tabs ~ #alltabs-button {
-    display: none !important;
-}
-
-#TabsToolbar {
-    margin-left: 24vw !important;
-    /*para volta para o formato antigo so tira*/
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 76vw !important;
-    /*z-index: 100 !important;*/
-}
-
-/* Nav bar*/
-#nav-bar {
-    background: transparent !important;
-    margin-right: 110vw !important;
-    margin-top: -44px !important;
-}
-
-/* URL bar */
-#back-button {
-    display: none !important;
-}
-
+#edit-menu,
+#view-menu, 
+#history-menu,
+#bookmarksMenu,
+#tools-menu,
+#window-menu,
+#helpMenu,
+#star-button-box,
+#extensions-button, 
+#star-button, 
+#unified-extensions-button,
+#tracking-protection-icon-container, 
+#PanelUI-button, 
+#identity-box,
+#tabbrowser-tabs
+#alltabs-button, 
+#back-button, 
 #forward-button {
     display: none !important;
 }
 
-#tracking-protection-icon-container {
-    display: none !important;
+/* Ajusta a posição e o tamanho, permitindo que a barra seja deslocada */
+#TabsToolbar {
+    margin-left: 12.7vw !important;  /* Move a barra de guias à direita */
+    position: absolute;
+    top: -10px;  /* Posição no topo da janela */
+    left: -10px;  /* Posição à esquerda */
+    width: 90vw !important;  /* Define a largura da barra de guias */
 }
 
+/* Remove o fundo e move a barra de navegação para fora da janela. */
+#nav-bar {
+    background: transparent !important;
+    margin-right: 87.7vw !important;  /* Move a barra de navegação para a direita */
+    margin-top: -54px !important;  /* Ajusta a posição para cima */
+}
+
+/* Remove o fundo e a sombra */
 #urlbar {
     background: transparent !important;
     box-shadow: none !important;
+    position: absolute;
+    top: 10px;
+    right: 6px;
 }
 
+/* Ajusta a largura da barra de endereços */
 #urlbar[breakout-extend] {
-    width: 13vw !important;
+    width: 12vw !important;  /* Define uma largura menor para a barra de endereços quando estendida */
     background: transparent !important;
 }
 
-#PanelUI-button {
-    display: none !important;
+/* Move o menu "File" para fora da tela */
+#file-menu {
+    position: absolute !important;
+    left: -9999px !important; /* Move o menu File completamente para a esquerda, fora da tela */
 }
 
-#identity-box {
-    display: none !important;
-}
-
-#extensions-button {
-    display: none !important;
-}
-
-#star-button {
-    display: none !important;
-}
-
-#unified-extensions-button {
-    display: none !important;
-}
-
-#star-button-box {
-    display: none !important;
-}
-
-/* Remover bordas ao redor da janela */
-#main-window {
-    border: none !important;
-    box-shadow: none !important;
-}
 
