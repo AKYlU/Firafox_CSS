@@ -26,17 +26,17 @@
 
 /* Ajusta a posição e o tamanho, permitindo que a barra seja deslocada */
 #TabsToolbar {
-    margin-left: 12.7vw !important;  /* Move a barra de guias à direita */
+    margin-left: 125vw !important;  /* Move a barra de guias à direita */
     position: absolute;
     top: -10px;  /* Posição no topo da janela */
-    left: -10px;  /* Posição à esquerda */
+    left: -2300px;  /* Posição à esquerda */
     width: 90vw !important;  /* Define a largura da barra de guias */
 }
 
 /* Remove o fundo e move a barra de navegação para fora da janela. */
 #nav-bar {
     background: transparent !important;
-    margin-right: 87.7vw !important;  /* Move a barra de navegação para a direita */
+    margin-right: 107.7vw !important;  /* Move a barra de navegação para a direita */
     margin-top: -54px !important;  /* Ajusta a posição para cima */
 }
 
