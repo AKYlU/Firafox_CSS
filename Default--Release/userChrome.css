@@ -20,9 +20,7 @@
 #tabbrowser-tabs
 #alltabs-button, 
 #back-button, 
-#forward-button {
-    display: none !important;
-}
+#forward-button {display: none !important;}
 
 /* Ajusta a posição e o tamanho, permitindo que a barra seja deslocada */
 #TabsToolbar {
