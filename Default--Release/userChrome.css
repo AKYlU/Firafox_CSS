@@ -1,5 +1,4 @@
-/* Oculta os botões Voltar, Avançar, minimizar, maximizar e fechar etc */
-.tab-close-button,
+.tab-close-button,            
 .titlebar-spacer,
 .titlebar-buttonbox,
 .tabs-new-tab-button,
@@ -19,27 +18,24 @@
 #identity-box,
 #tabbrowser-tabs
 #alltabs-button, 
-#back-button, 
+#back-button, /* Oculta os botões Voltar, Avançar, minimizar, maximizar e fechar etc */
 #forward-button {display: none !important;}
 
-/* Ajusta a posição e o tamanho, permitindo que a barra seja deslocada */
-#TabsToolbar {
+#TabsToolbar {                      /* Ajusta a posição e o tamanho, permitindo que a barra seja deslocada */
     margin-left: 125vw !important;  /* Move a barra de guias à direita */
     position: absolute;
-    top: -10px;  /* Posição no topo da janela */
-    left: -2300px;  /* Posição à esquerda */
-    width: 90vw !important;  /* Define a largura da barra de guias */
+    top: -10px;                     /* Posição no topo da janela */
+    left: -2300px;                  /* Posição à esquerda */
+    width: 90vw !important;         /* Define a largura da barra de guias */
 }
 
-/* Remove o fundo e move a barra de navegação para fora da janela. */
-#nav-bar {
+#nav-bar {                              /* Remove o fundo e move a barra de navegação para fora da janela. */
     background: transparent !important;
-    margin-right: 107.7vw !important;  /* Move a barra de navegação para a direita */
-    margin-top: -54px !important;  /* Ajusta a posição para cima */
+    margin-right: 107.7vw !important;   /* Move a barra de navegação para a direita */
+    margin-top: -54px !important;       /* Ajusta a posição para cima */
 }
 
-/* Remove o fundo e a sombra */
-#urlbar {
+#urlbar { /* Remove o fundo e a sombra */
     background: transparent !important;
     box-shadow: none !important;
     position: absolute;
@@ -47,14 +43,12 @@
     right: 6px;
 }
 
-/* Ajusta a largura da barra de endereços */
-#urlbar[breakout-extend] {
+#urlbar[breakout-extend] { /* Ajusta a largura da barra de endereços */
     width: 12vw !important;  /* Define uma largura menor para a barra de endereços quando estendida */
     background: transparent !important;
 }
 
-/* Move o menu "File" para fora da tela */
-#file-menu {
+#file-menu { /* Move o menu "File" para fora da tela */
     position: absolute !important;
     left: -9999px !important; /* Move o menu File completamente para a esquerda, fora da tela */
 }
