@@ -1,10 +1,10 @@
-@-moz-document domain("youtube.com") { /*e para desativar o 720p de lagura oude fica o video do youtube*/
+@-moz-document domain("youtube.com") { / *e para desativar o 720p de lagura oude fica o video do youtube */
     #columns.ytd-watch-flexy {
         max-width: none !important;
     }
 }
 
-@-moz-document domain("youtube.com") { /*e para colocar o wallpepar do video na escala seta*/
+@-moz-document domain("youtube.com") { / *e para colocar o wallpepar do video na escala seta */
     #columns.ytd-watch-flexy {
         max-width: none !important;
         width: 1920px !important;
@@ -12,7 +12,7 @@
     }
 }
 
-@-moz-document domain("youtube.com") { /*colocar o video em 0000x000 para pegar melho a tela*/
+@-moz-document domain("youtube.com") { / *colocar o video em 0000x000 para pegar melho a tela */
     .html5-main-video {
         width: 1446px !important;
         height: 813px !important;
@@ -21,10 +21,30 @@
     }
 }
 
-@-moz-document domain("youtube.com") { /*colocar o botao na escala de 0000x000 para companha o video*/
+@-moz-document domain("youtube.com") { /* colocar o botao na escala de 0000x000 para companha o video */
     .ytp-chrome-bottom {
         width: 1420px !important;
         left: 12px !important;
+    }
+}
+
+#GitHub
+
+@-moz-document domain("github.com") { /* e para deixa a box do pefil no max */
+    .container-xl.px-3.px-md-4.px-lg-5.mt-2 {
+        max-width: none !important;
+    }
+
+    .container-xl {
+        max-width: none !important;
+    }
+}
+
+@-moz-document domain("github.com") { /* e para deixa a box do pefil no max */
+    .container-xl {
+        max-width: none !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 }
 
