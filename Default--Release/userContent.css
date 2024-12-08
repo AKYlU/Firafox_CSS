@@ -1,0 +1,6 @@
+@-moz-document domain("youtube.com") {
+    #columns.ytd-watch-flexy {
+        max-width: none !important;
+    }
+}
+
