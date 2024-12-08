@@ -1,6 +1,30 @@
-@-moz-document domain("youtube.com") {
+@-moz-document domain("youtube.com") { /*e para desativar o 720p de lagura oude fica o video do youtube*/
     #columns.ytd-watch-flexy {
         max-width: none !important;
+    }
+}
+
+@-moz-document domain("youtube.com") { /*e para colocar o wallpepar do video na escala seta*/
+    #columns.ytd-watch-flexy {
+        max-width: none !important;
+        width: 1920px !important;
+        height: 1080px !important;
+    }
+}
+
+@-moz-document domain("youtube.com") { /*colocar o video em 0000x000 para pegar melho a tela*/
+    .html5-main-video {
+        width: 1446px !important;
+        height: 813px !important;
+        left: 0px !important;
+        top: 0px !important;
+    }
+}
+
+@-moz-document domain("youtube.com") { /*colocar o botao na escala de 0000x000 para companha o video*/
+    .ytp-chrome-bottom {
+        width: 1420px !important;
+        left: 12px !important;
     }
 }
 
