@@ -1,50 +1,42 @@
-@-moz-document domain("youtube.com") { / *e para desativar o 720p de lagura oude fica o video do youtube */
+/* YouTube - Desativar 720p e ajustar o tamanho do vídeo */
+@-moz-document domain("youtube.com") {
+    /* Para desativar o 720p de largura e deixar o vídeo do YouTube sem limitações */
     #columns.ytd-watch-flexy {
-        max-width: none !important;
+    max-width: none !important;
     }
-}
 
-@-moz-document domain("youtube.com") { / *e para colocar o wallpepar do video na escala seta */
+    /* Ajustar o tamanho do YouTube para 1920x1080 */
     #columns.ytd-watch-flexy {
-        max-width: none !important;
-        width: 1920px !important;
-        height: 1080px !important;
+    width: 1920px !important;
+    height: 1080px !important;
     }
-}
 
-@-moz-document domain("youtube.com") { / *colocar o video em 0000x000 para pegar melho a tela */
+    /* Ajustar o tamanho do vídeo */
     .html5-main-video {
         width: 1446px !important;
         height: 813px !important;
         left: 0px !important;
         top: 0px !important;
     }
-}
 
-@-moz-document domain("youtube.com") { /* colocar o botao na escala de 0000x000 para companha o video */
+    /* Ajustar a barra de controle (botão) */
     .ytp-chrome-bottom {
         width: 1420px !important;
         left: 12px !important;
     }
 }
 
-#GitHub
-
-@-moz-document domain("github.com") { /* e para deixa a box do pefil no max */
+/* GitHub - Ajustar a largura da box de perfil */
+@-moz-document domain("github.com") {
     .container-xl.px-3.px-md-4.px-lg-5.mt-2 {
         max-width: none !important;
     }
 
     .container-xl {
         max-width: none !important;
-    }
-}
-
-@-moz-document domain("github.com") { /* e para deixa a box do pefil no max */
-    .container-xl {
-        max-width: none !important;
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
 }
+
 
