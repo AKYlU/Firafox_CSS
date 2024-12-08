@@ -2,6 +2,7 @@
 .titlebar-spacer,
 .titlebar-buttonbox,
 .tabs-new-tab-button,
+#alltabs-button,
 #edit-menu,
 #view-menu,
 #history-menu,
@@ -21,8 +22,7 @@
 #back-button, /* Oculta os botões Voltar, Avançar, minimizar, maximizar e fechar etc */
 #forward-button {display: none !important;}
 
-/* Permite redimensionamento da barra de guias e da barra de navegação */
-#TabsToolbar, #nav-bar {
+#TabsToolbar, #nav-bar { /* Permite redimensionamento da barra de guias e da barra de navegação */
     position: absolute;
     top: 0;
     left: 0;
@@ -32,19 +32,17 @@
     overflow: hidden; /* Evita que o conteúdo ultrapasse a área da tela */
 }
 
-/* Ajusta o comportamento da barra de navegação quando estendida */
-#nav-bar {
+#nav-bar { /* Ajusta o comportamento da barra de navegação quando estendida */
     background: transparent !important;
     margin-right: 107.7vw !important;   /* Move a barra de navegação para a direita */
     margin-top: -35px !important;       /* Ajusta a posição para cima */
 }
 
-/* Ajusta o comportamento da barra de endereços */
-#urlbar {
+#urlbar { /* Ajusta o comportamento da barra de endereços */
     background: transparent !important;
     box-shadow: none !important;
     position: absolute;
-    top: 40px;
+    top: 37px;
     right: 0px;
     resize: horizontal;  /* Permite redimensionamento lateral da barra de endereços */
 }
