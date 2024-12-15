@@ -51,3 +51,7 @@
 position: absolute !important;
 left: -9999px !important; /* Move o menu File completamente para a esquerda, fora da tela */
 }
+
+#sidebar-box {
+    margin-top: 24px !important; /* Move o painel lateral para baixo */
+}
