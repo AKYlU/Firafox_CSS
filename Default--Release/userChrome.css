@@ -23,35 +23,20 @@
 #forward-button {display: none !important;}
 
 #TabsToolbar, #nav-bar { /* Permite redimensionamento da barra de guias e da barra de navegação */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;  /* Garantir que a barra de navegação ocupe toda a largura */
     z-index: 100;
     resize: horizontal;  /* Permite redimensionamento apenas horizontal */
     overflow: hidden; /* Evita que o conteúdo ultrapasse a área da tela */
 }
 
 #nav-bar { /* Ajusta o comportamento da barra de navegação quando estendida */
-    background: transparent !important;
-    margin-right: 107.7vw !important;   /* Move a barra de navegação para a direita */
-    margin-top: -35px !important;       /* Ajusta a posição para cima */
+    margin-top: -62px !important;       /* Ajusta a posição para cima remova se quese que fique nomal*/
 }
 
-#urlbar { /* Ajusta o comportamento da barra de endereços */
-    background: transparent !important;
-    box-shadow: none !important;
-    position: absolute;
-    top: 37px;
-    right: 0px;
-    resize: horizontal;  /* Permite redimensionamento lateral da barra de endereços */
+/* Aumenta a altura da barra de favoritos */
+#PersonalToolbar {
+    height: 25px !important; /* Ajuste a altura aqui */
 }
 
-#file-menu { /* Move o menu "File" para fora da tela */
-position: absolute !important;
-left: -9999px !important; /* Move o menu File completamente para a esquerda, fora da tela */
-}
-
-#sidebar-box {
-    margin-top: 24px !important; /* Move o painel lateral para baixo */
+#navigator-toolbox {
+  margin-top: -10px; /* Ajuste o valor para o deslocamento desejado */
 }
