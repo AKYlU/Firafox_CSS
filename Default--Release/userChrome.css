@@ -34,9 +34,9 @@
 
 /* Aumenta a altura da barra de favoritos */
 #PersonalToolbar {
-    height: 20px !important; /* Ajuste a altura aqui */
+    height: 17px !important; /* Ajuste a altura aqui */
 }
 
 #navigator-toolbox {
-  margin-top: -10px; /* Ajuste o valor para o deslocamento desejado */
+  margin-top: -12px; /* Ajuste o valor para o deslocamento desejado */
 }
