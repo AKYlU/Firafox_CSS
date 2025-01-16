@@ -4,3 +4,5 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 # deixa compact UI ou Barra
 browser.compactmode.show
 
+# desativar completamente o cache
+browser.cache.memory.capacity 0
