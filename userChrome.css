@@ -1,0 +1,42 @@
+.tab-close-button,
+.titlebar-spacer,
+.titlebar-buttonbox,
+.tabs-new-tab-button,
+#alltabs-button,
+#edit-menu,
+#view-menu,
+#history-menu,
+#bookmarksMenu,
+#tools-menu,
+#window-menu,
+#helpMenu,
+#star-button-box,
+#extensions-button,
+#star-button,
+#unified-extensions-button,
+#tracking-protection-icon-container,
+#PanelUI-button,
+#identity-box,
+#tabbrowser-tabs
+#alltabs-button,
+#back-button, /* Oculta os botões Voltar, Avançar, minimizar, maximizar e fechar etc */
+#forward-button {display: none !important;}
+
+#TabsToolbar, 
+#nav-bar { /* Permite redimensionamento da barra de guias e da barra de navegação */
+    resize: horizontal;  /* Permite redimensionamento apenas horizontal */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse a área da tela */
+}
+
+#nav-bar { /* Ajusta o comportamento da barra de navegação quando estendida */
+    margin-top: -70px !important;       /* Ajusta a posição para cima remova se quese que fique nomal*/
+}
+
+#navigator-toolbox {
+  margin-top: -14px; /* Ajuste o valor para o deslocamento desejado */
+}
+
+/* Aumenta a altura da barra de favoritos */
+#PersonalToolbar {
+    height: 20px !important; /* Ajuste a altura aqui */
+}
