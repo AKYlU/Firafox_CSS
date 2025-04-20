@@ -1,16 +1,20 @@
-#TabsToolbar, #nav-bar { /* Permite redimensionamento da barra de guias e da barra de navegação */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse a área da tela */
+.tab-close-button,        /* Remove o botão "X" de fechar nas abas */
+#alltabs-button {         /* Remove o botão "Todas as abas" */
+  display: none !important;
 }
 
-#nav-bar { /* Ajusta o comportamento da barra de navegação quando estendida */
-    margin-top: -62px !important;       /* Ajusta a posição para cima remova se quese que fique nomal*/
+#TabsToolbar, #nav-bar {  /* Permite redimensionamento da barra de guias e da barra de navegação */
+    overflow: hidden;     /* Evita que o conteúdo ultrapasse a área da tela */
 }
 
-/* Aumenta a altura da barra de favoritos */
-#PersonalToolbar {
-    height: 17px !important; /* Ajuste a altura aqui */
+#nav-bar {                /* Ajusta o comportamento da barra de navegação quando estendida */
+    margin-top: -62px !important;/* Ajusta a posição para cima remova se quese que fique nomal*/
 }
 
-#navigator-toolbox {
-  margin-top: -12px; /* Ajuste o valor para o deslocamento desejado */
+#PersonalToolbar {        /* Aumenta a altura da barra de favoritos */
+    height: 17px !important;/* Ajuste a altura aqui */
+}
+
+#navigator-toolbox {      /* Remove toda a parte superior da interface (menus, abas, barra de endereço) */
+  margin-top: -12px;      /* Ajuste o valor para o deslocamento desejado */
 }
