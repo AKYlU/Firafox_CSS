@@ -39,4 +39,181 @@
     }
 }
 
+@-moz-document domain("discord.com") {
+    /* Cor de fundo da sidebar com novo visual do Discord */
+    .visual-refresh .sidebarListRounded_c48ade {
+        background-color: azure !important; /* fundo azul-claro */
+    }
 
+      .scrollerInner__36d07 {
+        background-image: linear-gradient(to bottom, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degrade vertical */
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;  /* fixa o fundo enquanto rola */
+    }
+
+
+
+      .visual-refresh .title_c38106 {
+        background-image: radial-gradient(circle, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degradê circular */
+        background-size: cover !important;          /* cobre toda a área */
+        background-repeat: no-repeat !important;    /* sem repetição */
+        background-position: center !important;     /* centralizado */
+        background-clip: text !important;           /* usa o fundo como "textura" do texto */
+        -webkit-background-clip: text !important;
+        color: transparent !important;              /* texto transparente para mostrar o degradê */
+    }
+
+    .visual-refresh .scroller_ef3116 {
+        background-image: radial-gradient(circle, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degradê circular */
+        background-size: cover !important;          /* cobre toda a área */
+        background-repeat: no-repeat !important;    /* sem repetição */
+        background-attachment: fixed !important;    /* fundo fixo ao rolar */
+        background-position: center !important;     /* centralizado */
+    }
+
+       .visual-refresh .title_f75fb0 {
+        background-image: radial-gradient(circle, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degradê circular */
+        background-clip: text !important;             /* aplica o gradiente ao texto */
+        -webkit-background-clip: text !important;     /* suporte para WebKit */
+        color: transparent !important;                /* torna o texto transparente para exibir o fundo */
+        background-size: cover !important;            /* cobre todo o texto */
+        background-position: center !important;       /* centraliza o efeito */
+    }
+
+
+      .visual-refresh .header_f37cb1 {
+        background-image: radial-gradient(circle, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degradê circular */
+        background-clip: text !important;             /* usa o fundo como textura do texto */
+        -webkit-background-clip: text !important;
+        color: transparent !important;                /* texto se torna transparente */
+        background-size: cover !important;            /* cobre todo o texto */
+        background-position: center !important;       /* centraliza o degradê */
+    }
+
+  .title_c38106 (
+        background-image: radial-gradient(circle, #1e1e2f, #3a3a5c, #5c5c88) !important; /* degradê circular */
+        background-clip: text !important;             /* usa o fundo como textura do texto */
+        -webkit-background-clip: text !important;
+        color: transparent !important;                /* texto se torna transparente */
+        background-size: cover !important;            /* cobre todo o texto */
+        background-position: center !important;       /* centraliza o degradê */
+  )
+    .visual-refresh .form_f75fb0 {
+        background-image: linear-gradient(to top, #2c1e3e, #3b275a, #462d6d) !important; /* gradiente vertical */
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+
+  /*barra de anigo*/
+      .content__99f8c {
+        background-image: linear-gradient(to bottom, #2c1e3e, #3b275a, #462d6d) !important; /* degrade vertical roxo escuro */
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-position: center !important;
+    }
+   /*barra do pefil*/
+      .no-webkit-scrollbar .none_d125d2 {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-position: center !important;
+    }
+  /*barra de manda mesagem*/
+      .channelBottomBarArea_f75fb0 {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+    /*abaixo da barra de mesagem para eviar*/
+    .visual-refresh .form_f75fb0 {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-top: 1px solid #3b275a !important; /* linha sutil de separação */
+    }
+  /*ver pefil compreto*/
+      .app__160d8 button {
+        background-image: linear-gradient(to bottom, #3b275a, #462d6d) !important; /* degrade roxo vertical */
+        color: #ffffff !important;              /* cor do texto (branco) */
+        border: none !important;                /* remove borda padrão */
+        border-radius: 6px !important;          /* borda arredondada leve */
+        transition: background 0.3s ease !important; /* suaviza o hover */
+    }
+
+    /* Efeito hover: botão clareia um pouco */
+    .app__160d8 button:hover {
+        background-image: linear-gradient(to bottom, #4c2e70, #5a3690) !important;
+    }
+}
+/*barra do server*/
+    .itemsContainer_ef3116,
+    .topSection_ef3116,
+    .tree_ef3116 {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+  /*barra de cima no top*/
+    .visual-refresh .theme-darker,
+    .visual-refresh.theme-darker {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+  /*texto prisipal*/
+@-moz-document domain("chatgpt.com") {
+    body {
+        background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important; /* degrade circular roxo escuro */
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-position: center !important;
+    }
+
+  /*historico*/
+  .ps-3 {
+    background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important; /* degrade circular roxo escuro */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+  }
+  /*barra no top*/
+      .motion-safe\:bg-gradient {
+      background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important; /* degrade circular roxo escuro */
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-attachment: fixed !important;
+      background-position: center !important;
+}
+      .motion-safe\:transition {
+      background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-attachment: fixed !important;
+      background-position: center !important;
+)
+  menu, ol, ul {
+    background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+  )
+@layer base {
+  menu, ol, ul {
+    background-image: radial-gradient(circle, #2c1e3e, #3b275a, #462d6d) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+  }
+}
