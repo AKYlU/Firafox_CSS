@@ -18,3 +18,30 @@
 #navigator-toolbox {      /* Remove toda a parte superior da interface (menus, abas, barra de endereço) */
   margin-top: -12px;      /* Ajuste o valor para o deslocamento desejado */
 }
+
+.tabbrowser-tab:not([pinned]) {
+  margin-inline: 0px !important;  /* remove margem entre guias */
+}
+
+.tabbrowser-tab {
+  flex-grow: 0 !important;           /* impede expansão automática */
+  flex-shrink: 1 !important;         /* permite encolhimento */
+}
+
+/* Remove qualquer transição/atraso nos tooltips */
+tooltip,
+tooltip * {
+  animation: none !important;
+  transition: none !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Garante que tooltips não fiquem ocultos ou atrasados */
+.tooltip-label {
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
