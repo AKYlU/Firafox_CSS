@@ -1,31 +1,33 @@
-.tab-close-button,        /* Remove o botão "X" de fechar nas abas */
-#alltabs-button {         /* Remove o botão "Todas as abas" */
-  display: none !important;
+/* Remove o botão "X" de fechar nas abas */
+.tab-close-button { display: none !important; }
+
+/* Remove o botão "Todas as abas" */
+#alltabs-button { display: none !important; }
+
+/* Permite redimensionamento da barra de guias e da barra de navegação */
+#TabsToolbar,
+#nav-bar { overflow: hidden !important; }  /* evita conteúdo “vazar” */
+
+/* Ajusta o comportamento da barra de navegação quando estendida */
+#nav-bar {
+  margin-top: -62px !important;             /* mantém o deslocamento pra cima */
 }
 
-#TabsToolbar, #nav-bar {  /* Permite redimensionamento da barra de guias e da barra de navegação */
-    overflow: hidden;     /* Evita que o conteúdo ultrapasse a área da tela */
-}
+/* Aumenta a altura da barra de favoritos */
+#PersonalToolbar { height: 17px !important; }
 
-#nav-bar {                /* Ajusta o comportamento da barra de navegação quando estendida */
-    margin-top: -62px !important;/* Ajusta a posição para cima remova se quese que fique nomal*/
-}
+/* Remove toda a parte superior da interface (menus, abas, barra de endereço) */
+#navigator-toolbox { margin-top: -12px !important; }
 
-#PersonalToolbar {        /* Aumenta a altura da barra de favoritos */
-    height: 17px !important;/* Ajuste a altura aqui */
-}
-
-#navigator-toolbox {      /* Remove toda a parte superior da interface (menus, abas, barra de endereço) */
-  margin-top: -12px;      /* Ajuste o valor para o deslocamento desejado */
-}
-
+/* Remove margem entre guias não fixadas */
 .tabbrowser-tab:not([pinned]) {
-  margin-inline: 0px !important;  /* remove margem entre guias */
+  margin-inline: 0px !important;
 }
 
+/* Impede expansão automática e permite encolhimento das abas */
 .tabbrowser-tab {
-  flex-grow: 0 !important;           /* impede expansão automática */
-  flex-shrink: 1 !important;         /* permite encolhimento */
+  flex-grow:  0 !important;
+  flex-shrink: 1 !important;
 }
 
 /* Remove qualquer transição/atraso nos tooltips */
@@ -37,11 +39,25 @@ tooltip * {
   transition-delay: 0s !important;
 }
 
-/* Garante que tooltips não fiquem ocultos ou atrasados */
+/* Garante que tooltips apareçam imediatamente */
 .tooltip-label {
+  display: block !important;
+  opacity:      1 !important;
   animation-delay: 0s !important;
   transition-delay: 0s !important;
-  display: block !important;
-  opacity: 1 !important;
+}
+
+/* ——— BLOCO ADICIONAL PARA CLIQUE NO DOWNLOAD ——— */
+
+/* Garante que o ícone de downloads receba eventos de mouse */
+#downloads-button {
+  pointer-events: auto !important;           /* habilita clique normal e direito */
+  position:       relative !important;       /* para z-index afetar só aqui */
+  z-index:        9999 !important;           /* fica acima de qualquer overlay */
+}
+
+/* Se existir o triângulo de dropdown dentro do botão */
+#downloads-button .toolbarbutton-dropdown-button {
+  pointer-events: auto !important;           /* habilita clique no triângulo */
 }
 
