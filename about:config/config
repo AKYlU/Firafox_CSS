@@ -6,3 +6,10 @@ browser.compactmode.show
 
 # desativar completamente o cache
 browser.cache.memory.capacity 0
+
+gfx.webrender.all	true	                    Ativa o WebRender para renderização moderna via GPU
+media.ffmpeg.vaapi.enabled	true	          Ativa decodificação de vídeo via VA-API
+media.rdd-ffmpeg.enabled	true	            Permite uso do FFmpeg no processo RDD
+media.rdd-vpx.enabled	true	Decodificação   VP9 via RDD com VA-API
+layers.acceleration.force-enabled	true	    Força aceleração de hardware
+widget.wayland-dmabuf-webgl.enabled	true	  Suporte melhorado para WebGL via dmabuf no Wayland
