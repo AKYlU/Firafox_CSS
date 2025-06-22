@@ -1,3 +1,74 @@
+/* 00 – ROOT: garante que o painel de abas e a raiz fiquem transparentes */
+:root {
+  background: transparent !important;
+  --tabpanel-background-color: transparent !important;
+}
+
+/* 01 – Janela principal sem cor de fundo */
+#main-window {
+  background: transparent !important;
+}
+
+/* 02 – Barras (título, abas, navegação, favoritos) transparentes */
+#titlebar,
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 03 – Abas sem fundo, sem borda, sem sombra */
+.tabbrowser-tab,
+.tabbrowser-tab[selected="true"] .tab-background,
+.tab-background {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 04 – Texto das abas: ativo opaco, inativo semitransp. */
+.tabbrowser-tab .tab-label {
+  color: rgba(255,255,255,0.7) !important;
+}
+.tabbrowser-tab[selected="true"] .tab-label {
+  color: #fff !important;
+}
+
+/* 05 – Barra de endereço e busca com leve semitransp. */
+#urlbar-background,
+#searchbar {
+  background: rgba(20,20,20,0.4) !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 06 – Botão “hambúrguer” (menu principal) transparente */
+#PanelUI-button,
+#PanelUI-button > .toolbarbutton-icon {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 07 – Menus e popups leves sem sombra */
+menupopup,
+.popup-internal-box,
+.panel-subview-body,
+.panel-arrowcontent {
+  background: rgba(30,30,30,0.8) !important;
+  color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 08 – Remove foco e contornos visuais extras */
+*:-moz-focusring {
+  outline: none !important;
+}
 /* Remove o botão "X" de fechar nas abas */
 .tab-close-button { display: none !important; }
 
@@ -59,5 +130,34 @@ tooltip * {
 /* Se existir o triângulo de dropdown dentro do botão */
 #downloads-button .toolbarbutton-dropdown-button {
   pointer-events: auto !important;           /* habilita clique no triângulo */
+}
+/* ——— BLOCO FINAL: libera todos os botões da toolbox para clique ——— */
+
+/* 01 – Garante que a toolbox inteira receba eventos de mouse */
+#navigator-toolbox {
+  pointer-events: auto !important;        /* aceita clique na toolbox */
+  position: relative !important;          /* necessário para z-index */
+  z-index: 2147483647 !important;         /* fica acima de qualquer overlay */
+}
+
+/* 02 – Propaga essa permissão a todos os elementos internos */
+#navigator-toolbox * {
+  pointer-events: auto !important;        /* herda clique para tudo dentro */
+}
+
+/* 03 – Assegura que o botão de extensões fique por cima */
+#unified-extensions-button {
+  position: relative !important;          /* mantém posicionamento normal */
+  z-index: 2147483648 !important;         /* um ponto acima da toolbox */
+  opacity: 1 !important;                  /* visível mesmo com filtros */
+  filter: none !important;                /* sem cinza ou blur */
+}
+
+/* 04 – Ícone e badge também liberados para clique */
+#unified-extensions-button > .toolbarbutton-icon,
+#unified-extensions-button > .toolbarbutton-badge-stack {
+  pointer-events: auto !important;        /* clique no ícone e no triângulo */
+  opacity: 1 !important;                  /* sem semitransparência */
+  filter: none !important;                /* sem filtro acinzentado */
 }
 
