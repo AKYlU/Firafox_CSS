@@ -160,4 +160,22 @@ tooltip * {
   opacity: 1 !important;                  /* sem semitransparência */
   filter: none !important;                /* sem filtro acinzentado */
 }
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-color: rgba(30, 30, 30, 0.25) !important; /* semitransparente */
+  backdrop-filter: blur(14px) !important;              /* efeito de desfoque */
+}
+#urlbar-background {
+  background-color: rgba(20, 20, 20, 0.3) !important;   /* fundo escuro translúcido */
+  backdrop-filter: blur(10px) !important;              /* efeito suave */
+}
+.panel-arrowcontent,
+.popup-internal-box,
+.panel-subview-body {
+  background-color: rgba(25, 25, 25, 0.4) !important;   /* fundo levemente opaco */
+  backdrop-filter: blur(16px) !important;              /* efeito intenso */
+}
+.tabbrowser-tab:not([selected]) .tab-background {
+  background-color: rgba(30, 30, 30, 0.1) !important;   /* transparência leve */
+  backdrop-filter: blur(6px) !important;               /* blur mais suave */
+}
 
