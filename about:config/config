@@ -1,3 +1,6 @@
+# ativar conta
+identity.fxaccounts.enabled
+
 # ativar o arquivo css (acho)
 toolkit.legacyUserProfileCustomizations.stylesheets
 
